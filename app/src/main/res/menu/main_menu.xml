@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group
+        android:id="@+id/menu_group_chat"
+        android:visible="false">
+        <item
+            android:id="@+id/action_search"
+            android:icon="@drawable/ic_search"
+            android:title="Search"
+            app:showAsAction="always" />
+        <item
+            android:id="@+id/action_new_group"
+            android:title="New group"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_new_broadcast"
+            android:title="New broadcast"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_web_app"
+            android:title="Web app"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_starred_messages"
+            android:title="Starred messages"
+            app:showAsAction="never" />
+    </group>
+
+    <group
+        android:id="@+id/menu_group_status"
+        android:visible="false">
+
+    </group>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="99"
+        android:title="Settings"
+        app:showAsAction="never" />
+</menu>

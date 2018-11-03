@@ -32,10 +32,7 @@
         android:id="@+id/menu_group_status"
         android:visible="false">
 
-        <item
-            android:id="@+id/action_star"
-            android:title="Starred messages"
-            app:showAsAction="never" />
+        <!--Todo: Add menu items here-->
     </group>
     <item
         android:id="@+id/action_settings"

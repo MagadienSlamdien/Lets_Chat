@@ -21,6 +21,7 @@ public class ChatActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(chat.getName());
         getSupportActionBar().setCustomView(R.layout.profile_image);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
     }
 
     @Override
@@ -32,9 +33,8 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId())
-        {
-            case R.id.home:
+        switch (item.getItemId()) {
+            case android.R.id.home:
                 finish();
                 break;
             case R.id.action_chat_video:

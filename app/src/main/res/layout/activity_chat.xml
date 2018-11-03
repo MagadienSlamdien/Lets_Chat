@@ -32,7 +32,6 @@
             android:id="@+id/button_chatbox_send"
             android:text="@string/btn_send"
             android:textSize="14sp"
-            android:background="?attr/selectableItemBackground"
             android:clickable="true"
             android:layout_width="64dp"
             android:layout_height="48dp"

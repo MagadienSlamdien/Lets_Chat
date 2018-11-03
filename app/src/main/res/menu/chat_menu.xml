@@ -13,7 +13,7 @@
         android:title="Voice Call"
         app:showAsAction="always" />
     <item
-        android:id="@+id/action_chat_viewcontact"
+        android:id="@+id/action_chat_view_contact"
         android:enabled="true"
         android:title="View Contact" />
     <item
@@ -25,7 +25,7 @@
         android:enabled="true"
         android:title="Search" />
     <item
-        android:id="@+id/action_chat_mutenotifications"
+        android:id="@+id/action_chat_mute_notifications"
         android:enabled="true"
         android:title="Mute Notifications" />
     <item

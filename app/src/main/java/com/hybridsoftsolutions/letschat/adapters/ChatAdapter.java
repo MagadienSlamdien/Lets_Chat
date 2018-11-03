@@ -11,6 +11,8 @@ import com.hybridsoftsolutions.letschat.models.Chat;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     private List<Chat> chatsList;
@@ -23,7 +25,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name, lastMessage, datetime, profileImage;
+        TextView name, lastMessage, datetime;
+        CircleImageView profileImage;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -45,7 +48,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         holder.name.setText(chat.getName());
         holder.lastMessage.setText(chat.getLastMessage());
         holder.datetime.setText(chat.getDatetime());
-        holder.profileImage.setText(chat.getProfileImage());
+        //holder.profileImage.setImageDrawable(chat.getProfileImage());
     }
 
     @Override

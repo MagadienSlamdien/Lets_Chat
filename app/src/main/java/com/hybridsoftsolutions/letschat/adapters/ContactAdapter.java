@@ -11,6 +11,8 @@ import com.hybridsoftsolutions.letschat.models.Contact;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 /**
  * Created by Magadien on 2018/08/16.
  */
@@ -26,7 +28,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        TextView name, status, photo;
+        TextView name, status;
+        CircleImageView photo;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -46,7 +49,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         Contact contact = contactsList.get(position);
         holder.name.setText(contact.getName());
         holder.status.setText(contact.getStatus());
-        holder.photo.setText(contact.getPhoto());
+        //holder.photo.setText(contact.getPhoto());
     }
 
 

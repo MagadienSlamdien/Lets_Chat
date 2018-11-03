@@ -17,6 +17,7 @@ public class ChatActivity extends AppCompatActivity {
         Intent i = getIntent();
         Chat chat = i.getParcelableExtra("Chat");
         getSupportActionBar().setTitle(chat.getName());
+        getSupportActionBar().setCustomView(R.layout.profile_image);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

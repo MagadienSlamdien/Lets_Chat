@@ -27,6 +27,10 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.chat_menu, menu);
+        MenuItem menuMore = menu.findItem(R.id.action_chat_more);
+        if (menuMore != null) {
+            menuMore.getSubMenu().clearHeader();
+        }
         return true;
     }
 
@@ -58,9 +62,9 @@ public class ChatActivity extends AppCompatActivity {
             case R.id.action_chat_wallpaper:
                 new Toast(this).makeText(this, "Wallpaper", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.action_chat_more:
-                new Toast(this).makeText(this, "More", Toast.LENGTH_SHORT).show();
-                break;
+//            case R.id.action_chat_more:
+//                new Toast(this).makeText(this, "More", Toast.LENGTH_SHORT).show();
+//                break;
         }
 
         return true;

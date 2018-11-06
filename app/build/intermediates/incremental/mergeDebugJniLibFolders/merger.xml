@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Magadien\Documents\DEV\AndroidProjects\LetsChat\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="C:\Users\Magadien\Documents\DEV\AndroidProjects\LetsChat\app\src\debug\jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\DEV\Lets_Chat\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\DEV\Lets_Chat\app\src\debug\jniLibs"/></dataSet></merger>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_chat_video"
         android:enabled="true"
-        android:icon="@drawable/ic_chat"
+        android:icon="@drawable/ic_videocam"
         android:title="Video Call"
         app:showAsAction="always" />
     <item
@@ -35,5 +36,28 @@
     <item
         android:id="@+id/action_chat_more"
         android:enabled="true"
-        android:title="More" />
+        android:title="More">
+        <menu>
+            <item
+                android:id="@+id/action_chat_report"
+                android:title="Report"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_chat_block"
+                android:title="Block"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_chat_clear_chat"
+                android:title="Clear chat"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_chat_export_chat"
+                android:title="Export chat"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/action_chat_add_shortcut"
+                android:title="Add shortcut"
+                app:showAsAction="never" />
+        </menu>
+    </item>
 </menu>

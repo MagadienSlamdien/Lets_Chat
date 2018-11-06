@@ -1,4 +1,4 @@
-#Sat Nov 03 19:06:47 CAT 2018
-base.0=C\:\\Users\\Magadien\\Documents\\DEV\\AndroidProjects\\LetsChat\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Tue Nov 06 12:25:57 CAT 2018
+base.0=D\:\\DEV\\Lets_Chat\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

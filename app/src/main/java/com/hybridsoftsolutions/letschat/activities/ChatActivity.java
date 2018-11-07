@@ -3,14 +3,31 @@ package com.hybridsoftsolutions.letschat.activities;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.hybridsoftsolutions.letschat.R;
+import com.hybridsoftsolutions.letschat.adapters.MessageAdapter;
 import com.hybridsoftsolutions.letschat.models.Chat;
+import com.hybridsoftsolutions.letschat.models.Message;
+import com.hybridsoftsolutions.letschat.utils.RecyclerTouchListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ChatActivity extends AppCompatActivity {
+    private List<Message> messageList = new ArrayList<>();
+    private RecyclerView rv_messages;
+    private MessageAdapter mAdapter;
+    private EditText mEdittextMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,10 +35,43 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
         Intent i = getIntent();
         Chat chat = i.getParcelableExtra("Chat");
+
+        mEdittextMessage = findViewById(R.id.edittext_chatbox);
+
+        mAdapter = new MessageAdapter(this , messageList);
+        rv_messages = findViewById(R.id.rv_messages);
+        RecyclerView.LayoutManager lm = new LinearLayoutManager(this, LinearLayout.VERTICAL, false);
+        rv_messages.setLayoutManager(lm);
+        rv_messages.setItemAnimator(new DefaultItemAnimator());
+        rv_messages.setAdapter(mAdapter);
+        rv_messages.addOnItemTouchListener(new RecyclerTouchListener(this, rv_messages, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+//                Intent i = new Intent(getActivity(), ChatActivity.class);
+//                i.putExtra("Chat", chatsList.get(position));
+//                startActivity(i);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+//                Chat chat = chatsList.get(position);
+//                Toast.makeText(getContext(), "long click - Name: " + chat.getName().toString() + ", Last Message: " + chat.getLastMessage().toString(), Toast.LENGTH_LONG).show();
+            }
+        }));
+
         getSupportActionBar().setTitle(chat.getName());
         getSupportActionBar().setCustomView(R.layout.profile_image);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
+
+        prepareData();
+    }
+
+    void prepareData(){
+        Message message = new Message("Hi, how are you?", "2","Blah");
+        messageList.add(message);
+
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
@@ -68,5 +118,14 @@ public class ChatActivity extends AppCompatActivity {
         }
 
         return true;
+    }
+
+    public void SendOnClick(View view){
+        Message message = new Message(mEdittextMessage.getText().toString(), "1","Blah");
+        messageList.add(message);
+
+        mEdittextMessage.setText("");
+
+        mAdapter.notifyDataSetChanged();
     }
 }

@@ -3,38 +3,38 @@ package com.hybridsoftsolutions.letschat.models;
 import org.w3c.dom.Text;
 
 public class Message {
-    private Text message, user, created;
+    private String message, user, created;
 
     public Message() {
     }
 
-    public Message(Text message, Text user, Text created) {
+    public Message(String message, String user, String created) {
         this.message = message;
         this.user = user;
         this.created = created;
     }
 
-    public Text getMessage() {
+    public String getMessage() {
         return message;
     }
 
-    public void setMessage(Text message) {
+    public void setMessage(String message) {
         this.message = message;
     }
 
-    public Text getUser() {
+    public String getUser() {
         return user;
     }
 
-    public void setUser(Text user) {
+    public void setUser(String user) {
         this.user = user;
     }
 
-    public Text getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(Text created) {
+    public void setCreated(String created) {
         this.created = created;
     }
 }

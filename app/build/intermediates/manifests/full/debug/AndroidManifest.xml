@@ -41,6 +41,7 @@
         <activity android:name="com.hybridsoftsolutions.letschat.activities.MainActivity" />
         <activity android:name="com.hybridsoftsolutions.letschat.activities.ContactActivity" />
         <activity android:name="com.hybridsoftsolutions.letschat.activities.ChatActivity" />
+        <activity android:name="com.hybridsoftsolutions.letschat.activities.LoginActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

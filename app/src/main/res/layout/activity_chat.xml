@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,39 +10,41 @@
         android:id="@+id/rv_messages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="52dp"
         android:clipToPadding="false"
-        />
+        android:paddingBottom="52dp"
+        app:stackFromEnd="true" />
 
     <LinearLayout
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
         android:minHeight="48dp"
-        android:background="#ffffff">
+        android:orientation="horizontal">
+
         <EditText
             android:id="@+id/edittext_chatbox"
-            android:hint="@string/enter_message"
-            android:background="@android:color/transparent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
-            android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:maxLines="6"/>
+            android:background="@android:color/transparent"
+            android:hint="@string/enter_message"
+            android:maxLines="6" />
+
         <Button
             android:id="@+id/button_chatbox_send"
-            android:text="@string/btn_send"
-            android:textSize="14sp"
-            android:clickable="true"
             android:layout_width="64dp"
             android:layout_height="48dp"
-            android:onClick="SendOnClick"
-            android:gravity="center"
             android:layout_gravity="bottom"
-            android:focusable="true" />
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="SendOnClick"
+            android:text="@string/btn_send"
+            android:textSize="14sp" />
     </LinearLayout>
 
 </RelativeLayout>

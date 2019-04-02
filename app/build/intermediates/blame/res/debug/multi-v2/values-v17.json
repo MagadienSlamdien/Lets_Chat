@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\DEV\\Lets_Chat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
+            "outputFile": "C:\\Users\\Magadien\\Documents\\DEV\\AndroidProjects\\LetsChat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v17\\values-v17.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\7cfac8dfdcfc7fdd4b540c27bcc565e7\\res\\values-v17\\values-v17.xml",
+                    "source": "C:\\Users\\Magadien\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\6f47ae763464e28293818e57fa4cdcd4\\res\\values-v17\\values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,26,29,32,35,39,42,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

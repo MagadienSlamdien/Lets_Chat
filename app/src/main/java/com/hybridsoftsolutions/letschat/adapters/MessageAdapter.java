@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.hybridsoftsolutions.letschat.R;
 import com.hybridsoftsolutions.letschat.models.Message;
+import com.hybridsoftsolutions.letschat.utils.gen;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class MessageAdapter extends RecyclerView.Adapter {
 
     private Context mContext;
     private List<Message> mMessagesList;
+    private gen utils = new gen();
 
     public MessageAdapter(Context context, List<Message> messagesList){
         mContext = context;
@@ -92,12 +94,12 @@ public class MessageAdapter extends RecyclerView.Adapter {
             messageText.setText(message.getMessage());
 
             // Format the stored timestamp into a readable String using method.
-            timeText.setText("11:45");
+            timeText.setText(utils.GetTimeFromCurrentDate());
         }
     }
 
     private class ReceivedMessageHolder extends RecyclerView.ViewHolder {
-        TextView messageText, timeText, nameText;
+        TextView messageText, timeText;//, nameText;
         //ImageView profileImage;
 
         ReceivedMessageHolder(View itemView) {
@@ -105,7 +107,7 @@ public class MessageAdapter extends RecyclerView.Adapter {
 
             messageText = (TextView) itemView.findViewById(R.id.text_message_body);
             timeText = (TextView) itemView.findViewById(R.id.text_message_time);
-            nameText = (TextView) itemView.findViewById(R.id.text_message_name);
+            //nameText = (TextView) itemView.findViewById(R.id.text_message_name);
             //profileImage = (ImageView) itemView.findViewById(R.id.image_message_profile);
         }
 
@@ -113,10 +115,9 @@ public class MessageAdapter extends RecyclerView.Adapter {
             messageText.setText(message.getMessage());
 
             // Format the stored timestamp into a readable String using method.
-            timeText.setText("11:40");
+            timeText.setText(utils.GetTimeFromCurrentDate());
 
-            nameText.setText("Jonny");
-
+            //nameText.setText("Jonny");
             // Insert the profile image from the URL into the ImageView.
             //Utils.displayRoundImageFromUrl(mContext, message.getSender().getProfileUrl(), profileImage);
         }

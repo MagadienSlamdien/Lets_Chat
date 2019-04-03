@@ -11,29 +11,32 @@ import com.hybridsoftsolutions.letschat.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private Button btn;
-    private EditText name;
-    public static final String NICKNAME = "usernickname";
+    private EditText editTextMobile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        btn = (Button) findViewById(R.id.btn_login);
-        name = (EditText) findViewById(R.id.et_username);
+        editTextMobile = findViewById(R.id.editTextMobile);
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.buttonContinue).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                if (!name.getText().toString().isEmpty()) {
-                    Intent i = new Intent(LoginActivity.this, ChatActivity.class);
+            public void onClick(View v) {
 
-                    i.putExtra(NICKNAME, name.getText().toString());
+                String mobile = editTextMobile.getText().toString().trim();
 
-                    startActivity(i);
+                if(mobile.isEmpty() || mobile.length() < 10){
+                    editTextMobile.setError("Enter a valid mobile");
+                    editTextMobile.requestFocus();
+                    return;
                 }
+
+                Intent intent = new Intent(LoginActivity.this, VerifyPhoneActivity.class);
+                intent.putExtra("mobile", mobile);
+                startActivity(intent);
             }
         });
+
     }
 }

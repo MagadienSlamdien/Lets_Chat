@@ -47,10 +47,10 @@ public class ChatActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        name = (String) getIntent().getExtras().getString(LoginActivity.NICKNAME);
-
-//        Intent i = getIntent();
-//        Chat chat = i.getParcelableExtra("Chat");
+        //name = (String) getIntent().getExtras().getString(LoginActivity.NICKNAME);
+        Intent i = getIntent();
+        Chat chat = i.getParcelableExtra("Chat");
+        name = chat.getName();
 //
         mEdittextMessage = findViewById(R.id.edittext_chatbox);
 //
@@ -80,7 +80,7 @@ public class ChatActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        //prepareData();
+        prepareData();
 
         try {
             socket = IO.socket("http://192.243.100.152:8008");
@@ -215,17 +215,17 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     public void SendOnClick(View view) {
-//        Message message = new Message(mEdittextMessage.getText().toString(), "1", "Blah");
-//        messageList.add(message);
-//
-//        mEdittextMessage.setText("");
-//
-//        mAdapter.notifyDataSetChanged();
+        Message message = new Message(mEdittextMessage.getText().toString(), "1", "Blah");
+        messageList.add(message);
 
-        if (!mEdittextMessage.getText().toString().isEmpty()) {
-            socket.emit("messagedetection", name, mEdittextMessage.getText().toString());
-            mEdittextMessage.setText("");
-        }
+        mEdittextMessage.setText("");
+
+        mAdapter.notifyDataSetChanged();
+
+//        if (!mEdittextMessage.getText().toString().isEmpty()) {
+//            socket.emit("messagedetection", name, mEdittextMessage.getText().toString());
+//            mEdittextMessage.setText("");
+//        }
 
     }
 }

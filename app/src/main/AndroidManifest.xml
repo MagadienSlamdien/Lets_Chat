@@ -23,6 +23,7 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.ContactActivity" />
         <activity android:name=".activities.ChatActivity" />
+        <activity android:name=".activities.VerifyPhoneActivity" />
         <activity android:name=".activities.LoginActivity"></activity>
     </application>
 

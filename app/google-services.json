@@ -23,8 +23,12 @@
           }
         },
         {
-          "client_id": "548558109293-c2ggi8v8bbm7q59n4m0hhjqmq4g5ihq0.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "548558109293-196fbmr6628jud6h9hsgaqbq2co8egqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hybridsoftsolutions.letschat",
+            "certificate_hash": "5637f9129f92aa6102920522c6ab1c7db4f43f6f"
+          }
         }
       ],
       "api_key": [
@@ -33,20 +37,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "548558109293-c2ggi8v8bbm7q59n4m0hhjqmq4g5ihq0.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }

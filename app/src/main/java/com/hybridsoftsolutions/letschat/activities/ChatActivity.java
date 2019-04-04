@@ -83,7 +83,8 @@ public class ChatActivity extends AppCompatActivity {
         prepareData();
 
         try {
-            socket = IO.socket("http://192.243.100.152:8008");
+            //socket = IO.socket("http://192.243.100.152:8008");
+            socket = IO.socket("http://192.168.1.121:8008");
             //socket = IO.socket("http://192.168.8.102:8008");
             Log.d(TAG, "onCreate: socket connect");
             socket.connect();

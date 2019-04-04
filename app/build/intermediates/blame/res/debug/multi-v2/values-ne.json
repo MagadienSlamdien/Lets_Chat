@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\allan\\StudioProjects\\Lets_Chat\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ne\\values-ne.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\7cfac8dfdcfc7fdd4b540c27bcc565e7\\res\\values-ne\\values-ne.xml",
+                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\98059c04cf665ff1f6fa62f7ce0eaea2\\res\\values-ne\\values-ne.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\412b6204dfe2b8932c517097e26f7cfa\\res\\values-ne\\values.xml",
+                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-15.0.1.aar\\f3c3b872f1a2fb576c2e270377417b85\\res\\values-ne\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\23998d6211995e74a559c27835523d30\\res\\values-ne\\values.xml",
+                    "source": "C:\\Users\\allan\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-15.0.1.aar\\aff67db8ca59b631be70370cb2080abc\\res\\values-ne\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
